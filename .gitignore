@@ -1,0 +1,65 @@
+# =============================================================================
+# StarGazer — Root .gitignore
+# =============================================================================
+# 하위 디렉토리(backend/, frontend/)에도 .gitignore 가 있어 더 세부 항목을
+# 다루지만, 루트에서도 동일 항목을 명시해 안전하게 이중 보장한다.
+# =============================================================================
+
+# ----- OS / Editor -----
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# ----- Python (backend) -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ----- Node / Vite (frontend) -----
+node_modules/
+dist/
+.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+
+# TypeScript incremental build cache & emitted artifacts from config files
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
+# ----- Build artifacts -----
+build/
+
+# ----- Secrets / local env -----
+.env
+.env.*
+!.env.example
+
+# ----- Workshop / chat ephemera -----
+chat-*.json
+chat-prep-*.json
+
+# ----- AI-DLC (자동 생성·진행 상태 — 산출물은 추적 가능, 임시 파일만 무시) -----
+# (현재는 모든 산출물을 트래킹. 만약 임시 파일이 생기면 여기에 추가)
